@@ -1,7 +1,7 @@
 # Mission to Mars 
 ## Purpose
 
-The purpose of this project was to create a webscraping application utilizing Python, Beautiful Soup and Splinter that would do the following:
+The purpose of this project was to create a webscraping application utilizing Python, Beautiful Soup, Splinter and Chrome Web Driver Manager that would do the following:
 - Retrieve information and images from various websites.
 - Add the informaton to a locally hosted website. 
 - Add scraped data to a Mongo database.
@@ -36,3 +36,11 @@ Some of the changes made include:
 
 #### Final Version of Application
 ![Updated_Site_Style](https://github.com/LleeMcD/Mission-to-Mars/blob/main/Resources/Updated_Site_Style.png)
+
+## Resources
+- Mars NASA News Site URL: https://redplanetscience.com
+- Jet Propulsion Laboratory - Mars Images URL: https://spaceimages-mars.com 
+- Galaxy Facts - Mars URL: https://galaxyfacts-mars.com
+- GUSS Astropedia - Mars URL: https://marshemispheres.com/
+- Course content:
+   -  © 2020 - 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
