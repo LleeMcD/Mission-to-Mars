@@ -16,7 +16,7 @@ Deliverable 1: Scrape full-resolution images of Mars' hemispheres and titles of 
 
 Deliverable 2: Add the code created in Deliverable 1 to the scraping.py file, update the Mongo databse and modify the index.html file so the webpage contains all of the information that was collected in this module including a full-resolution image and title for each hemisphere image.
 
-#### Mongo Data from Mars Database
+#### Mongo Mars Database 
 ![Mongo_Data](https://github.com/LleeMcD/Mission-to-Mars/blob/main/Resources/Mongo_Data.png)
 
 #### Mars Hemisphere Images Added to Site
@@ -27,9 +27,9 @@ Deliverable 3: Add Bootstrap 3 components. Update the web application to make it
 Some of the changes made include:
 - Made user friendly for phone, tablet, laptop and desktop viewing.
 - Color of scraping button changed from blue to red.
-- Added responsive thumbnail images that take a user to the the full size image when clicked.
-- Header font style changed to bold.
-- Borders added to images.
+- Added responsive thumbnail images that take the viewer to a full sized image when clicked.
+- Font style for all headers changed to bold.
+- Subtle light grey borders added to images.
    
 #### Viewer Friendly Application - Inspect
 ![Site_Phone_Tablet_View](https://github.com/LleeMcD/Mission-to-Mars/blob/main/Resources/Site_Phone_Tablet_View.png)
