@@ -10,7 +10,7 @@ The purpose of this project was to create a Python webscraping application that 
 Some screen shots from the project are below. The related files and images are in the repository for easy reference.
 
 Deliverable 1: Scrape full-resolution images of Mars' hemispheres and titles of those images.
-
+Inspection of 
 ![]()
 
 
