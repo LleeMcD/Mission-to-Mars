@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><strong>Mission to Mars</strong></title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    link/>
+     </head>
+  <body>
+    <div class="container">     
+      <!-- Add Jumbotron to Header -->
+      <div class="jumbotron text-center">
+        <h1><strong>Mission to Mars</strong></h1>        
+        <!-- Add a button to activate scraping script -->
+        <p><a class="btn btn-danger btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+      </div>    
+      <!-- Add section for Mars News -->
+      <div class="row" id="mars-news">
+        <div class="col-md-12">
+          <div class="media">
+            <div class="media-body">
+              <h2><strong>Latest Mars News</strong></h2>
+              <h4 class="media-heading">{{ mars.news_title }}</h4>
+              <p>{{ mars.news_paragraph }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section for Featured Image and Facts table -->
+      <div class="row" id="mars-featured-image">
+        <div class="col-md-8">
+          <h2><strong>Featured Mars Image</strong></h2>
+
+          <!-- if images is False/None/non-existent, then default to error message -->
+          <img
+            src="{{mars.featured_image | default('static/images/error.png', true) }}"
+            class="img-responsive"
+            alt="Responsive image"
+          />
+        </div>
+
+        <div class="col-md-4">
+          <!-- Mars Facts -->
+          <div class="row" id="mars-facts">
+            <h2><strong>Mars Facts</strong></h2>
+            {{ mars.facts | safe }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Section for Mars Hemispheres -->
+      <div class="row" id="mars-hemispheres">
+        <div class="page-header">
+          <h2 class="text-center"><strong>Mars Hemispheres</strong></h2>
+        </div>
+        <style>
+        img {
+          border: 2px solid #ddd; /* Gray border */
+          border-radius: 4px;  /* Rounded border */
+          padding: 3px; /* Some padding */
+          width: 150px; /* Set a small width */
+        }
+        
+        /* Add a hover effect (blue shadow) */
+        img:hover {
+          box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        }
+        </style>      
+        
+        <body>                
+        {% for hemisphere in mars.hemispheres %}
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="...">
+            <div class="caption">
+              <h3><strong>{{hemisphere.title}}</strong></h3>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        <h3><strong>Mars Thumbnail Images</strong></h3>
+          <p><strong>Click on the image to enlarge it.</strong></p>
+          
+          <a target="_blank" href="https://marshemispheres.com/cerberus.html">
+            <img src="https://marshemispheres.com/images/39d3266553462198bd2fbc4d18fbed17_cerberus_enhanced.tif_thumb.png" alt="Cerebrus Hemisphere Enhanced thumbnail" style="width:150px">
+          </a>  
+          
+          <a target="_blank" href="https://marshemispheres.com/schiaparelli.html"> 
+           <img src="https://marshemispheres.com/images/08eac6e22c07fb1fe72223a79252de20_schiaparelli_enhanced.tif_thumb.png" alt="Schiaparelli Hemisphere Enhanced thumbnail" style="width:150px">
+          </a>
+
+          <a target="_blank" href="https://marshemispheres.com/syrtis.html">
+            <img src="https://marshemispheres.com/images/55a0a1e2796313fdeafb17c35925e8ac_syrtis_major_enhanced.tif_thumb.png" alt="Syrtis Major Hemisphere Enhanced thumbnail" style="width:150px">
+          </a>
+
+          <a target="_blank" href="https://marshemispheres.com/valles.html">         
+            <img src="https://marshemispheres.com/images/4e59980c1c57f89c680c0e1ccabbeff1_valles_marineris_enhanced.tif_thumb.png" alt="Valles Marineris Hemisphere Enhanced thumbnail" style="width:150px">  
+         </a>
+      </div>
+    </div>
+  </body>
+</html>
